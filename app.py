@@ -82,7 +82,7 @@ def display_pdf(file_path: str):
         # First add a prominent link to open PDF
         st.markdown("""
         <div style='text-align: center; margin: 20px 0;'>
-            <a href='susi-letter-from-birmingham-jail.pdf' target='_blank' 
+            <a href='https://github.com/user-attachments/files/18350291/susi-letter-from-birmingham-jail.pdf' target='_blank' 
                style='
                    background-color: #0066cc;
                    color: white;
