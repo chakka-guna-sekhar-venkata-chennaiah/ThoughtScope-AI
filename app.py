@@ -75,23 +75,14 @@ st.markdown("""
 # Initialize session state for message history
 if "messages" not in st.session_state:
     st.session_state.messages = []
-'''
-# Helper function to display PDF documents
-def display_pdf(file_path: str):
-    """Creates an embedded PDF viewer with navigation controls."""
-    try:
-        pdf_viewer(file_path)
-    
-    except Exception as e:
-        st.error(f"Error displaying PDF: {str(e)}")
-'''
+
 def display_pdf(file_path: str):
     """Creates an embedded PDF viewer with navigation controls and external link."""
     try:
         # First add a prominent link to open PDF
-        st.markdown(f"""
+        st.markdown("""
         <div style='text-align: center; margin: 20px 0;'>
-            <a href='{file_path}' target='_blank' rel='noopener noreferrer'
+            <a href='susi-letter-from-birmingham-jail.pdf' target='_blank' 
                style='
                    background-color: #0066cc;
                    color: white;
@@ -103,15 +94,18 @@ def display_pdf(file_path: str):
                    margin-bottom: 20px;
                    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
                '>
-               📄 Open PDF in New Tab for Better Reading
+               📄 Download PDF for Better Reading
             </a>
         </div>
         """, unsafe_allow_html=True)
         
         # Then show embedded preview
         pdf_viewer(file_path)
+    
     except Exception as e:
         st.error(f"Error displaying PDF: {str(e)}")
+
+
 
 # Helper function to process search results and create evidence
 def process_evidence(matches, narratives, pdf_path):
