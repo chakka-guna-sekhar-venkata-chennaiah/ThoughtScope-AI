@@ -244,7 +244,7 @@ def initialize_ai_components():
         tuple: (gemini_model, embedding_model) - The initialized AI models
     """
     # Initialize Gemini
-    genai.configure(api_key="AIzaSyCiN43ObmAtoYW_rpIJyMijTYQ6Ma3LK04")  # Replace with your actual API key
+    genai.configure(api_key=st.secrets['api_key'])  # Replace with your actual API key
     model = genai.GenerativeModel(model_name='gemini-1.5-flash-latest')
     
     # Initialize embedding model
@@ -301,7 +301,7 @@ if page == "About":
 
   
     
-    st.image("/Users/codevlogger/Downloads/ragvision/architecture.png", use_container_width=True)
+    st.image("architecture.png", use_container_width=True)
     
     st.divider()
     
