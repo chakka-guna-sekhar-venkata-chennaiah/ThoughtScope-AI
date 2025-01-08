@@ -14,7 +14,7 @@ import time
 
 # Configure the page with wide layout and expanded sidebar by default
 st.set_page_config(
-    page_title="RAG Vision - Transparent Document Intelligence",
+    page_title="🔮 RAG Vision - Transparent Document Intelligence",
     layout="wide",
     initial_sidebar_state="expanded"
 )
@@ -344,8 +344,8 @@ elif page == "Demo":
         
         Try asking something like:
         - What is King's critique of the white moderate?
-        - How does King justify civil disobedience?
-        - What is the difference between just and unjust laws?
+        - How does King justify his presence in Birmingham when critics called him an 'outsider'?
+        - What distinction does King make between just and unjust laws?
         """)
     
     # Display chat history
