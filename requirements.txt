@@ -3,3 +3,4 @@ sentence-transformers
 pymupdf
 Pillow
 google-generativeai
+streamlit-pdf-viewer
