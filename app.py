@@ -75,11 +75,40 @@ st.markdown("""
 # Initialize session state for message history
 if "messages" not in st.session_state:
     st.session_state.messages = []
-
+'''
 # Helper function to display PDF documents
 def display_pdf(file_path: str):
     """Creates an embedded PDF viewer with navigation controls."""
     try:
+        pdf_viewer(file_path)
+    
+    except Exception as e:
+        st.error(f"Error displaying PDF: {str(e)}")
+'''
+def display_pdf(file_path: str):
+    """Creates an embedded PDF viewer with navigation controls and external link."""
+    try:
+        # First add a prominent link to open PDF
+        st.markdown("""
+        <div style='text-align: center; margin: 20px 0;'>
+            <a href='susi-letter-from-birmingham-jail.pdf' target='_blank' 
+               style='
+                   background-color: #0066cc;
+                   color: white;
+                   padding: 10px 20px;
+                   text-decoration: none;
+                   border-radius: 5px;
+                   font-weight: bold;
+                   display: inline-block;
+                   margin-bottom: 20px;
+                   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+               '>
+               📄 Open PDF in New Tab for Better Reading
+            </a>
+        </div>
+        """, unsafe_allow_html=True)
+        
+        # Then show embedded preview
         pdf_viewer(file_path)
     
     except Exception as e:
