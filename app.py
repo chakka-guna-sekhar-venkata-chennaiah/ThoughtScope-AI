@@ -239,7 +239,7 @@ def annotate_pdf_chunk(pdf_path: str, match: dict, layout_dims: dict) -> Image:
     # Draw semi-transparent highlight
     draw.polygon(scaled_points, fill=(236, 255, 229, 120))
     # Draw border for emphasis
-    draw.polygon(scaled_points, outline=(255, 225, 0), width=3)
+    draw.polygon(scaled_points, outline=(139, 0, 0), width=3)
     
     pdf_doc.close()
     return img
