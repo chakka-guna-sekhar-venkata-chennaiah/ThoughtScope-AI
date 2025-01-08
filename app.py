@@ -14,7 +14,7 @@ import time
 
 # Configure the page with wide layout and expanded sidebar by default
 st.set_page_config(
-    page_title="🔮 RAG Vision - Transparent Document Intelligence",
+    page_title="🔮 Thoughtful AI - Transparent Document Intelligence",
     layout="wide",
     initial_sidebar_state="expanded"
 )
