@@ -80,7 +80,21 @@ if "messages" not in st.session_state:
 def display_pdf(file_path: str):
     """Creates an embedded PDF viewer with navigation controls."""
     try:
-        pdf_viewer(file_path)
+        with open(file_path, "rb") as f:
+            base64_pdf = base64.b64encode(f.read()).decode('utf-8')
+        pdf_display = f"""
+        <div class="pdf-viewer">
+            <iframe 
+                src="data:application/pdf;base64,{base64_pdf}" 
+                width="100%" 
+                height="100%" 
+                type="application/pdf"
+                style="border: none;"
+            >
+            </iframe>
+        </div>
+        """
+        st.markdown(pdf_display, unsafe_allow_html=True)
     except Exception as e:
         st.error(f"Error displaying PDF: {str(e)}")
 
