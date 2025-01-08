@@ -89,9 +89,9 @@ def display_pdf(file_path: str):
     """Creates an embedded PDF viewer with navigation controls and external link."""
     try:
         # First add a prominent link to open PDF
-        st.markdown("""
+        st.markdown(f"""
         <div style='text-align: center; margin: 20px 0;'>
-            <a href='https://github.com/user-attachments/files/18350291/susi-letter-from-birmingham-jail.pdf' target='_blank' 
+            <a href='{file_path}' target='_blank' rel='noopener noreferrer'
                style='
                    background-color: #0066cc;
                    color: white;
@@ -110,7 +110,6 @@ def display_pdf(file_path: str):
         
         # Then show embedded preview
         pdf_viewer(file_path)
-    
     except Exception as e:
         st.error(f"Error displaying PDF: {str(e)}")
 
