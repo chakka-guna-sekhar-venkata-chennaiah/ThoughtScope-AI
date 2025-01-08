@@ -1,6 +1,9 @@
 import streamlit as st
 import google.generativeai as genai
 from sentence_transformers import SentenceTransformer
+from streamlit_pdf_viewer import pdf_viewer
+
+
 import fitz
 from PIL import Image, ImageDraw
 import json
@@ -77,6 +80,7 @@ if "messages" not in st.session_state:
 def display_pdf(file_path: str):
     """Creates an embedded PDF viewer with navigation controls."""
     try:
+        '''
         with open(file_path, "rb") as f:
             base64_pdf = base64.b64encode(f.read()).decode('utf-8')
         pdf_display = f"""
@@ -92,6 +96,8 @@ def display_pdf(file_path: str):
         </div>
         """
         st.markdown(pdf_display, unsafe_allow_html=True)
+        '''
+        pdf_viewer(file_path)
     except Exception as e:
         st.error(f"Error displaying PDF: {str(e)}")
 
