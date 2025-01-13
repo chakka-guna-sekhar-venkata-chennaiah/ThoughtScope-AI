@@ -325,7 +325,7 @@ if page == "About":
     3. See both the AI's response and the supporting evidence
     
     ### 📋 Want to replicate this?
-    * Follow the [houghtScope AI colab notebook](https://colab.research.google.com/drive/1_VLFffFLE1y-lM5QEVAvy8GZhhdpijs6?usp=sharing) for creating `processed_narratives_jailer_v1.json` file. May you file name will be different!
+    * Follow the [ThoughtScope AI colab notebook](https://colab.research.google.com/drive/1_VLFffFLE1y-lM5QEVAvy8GZhhdpijs6?usp=sharing) for creating `processed_narratives_jailer_v1.json` file. May you file name will be different!
     * Don't forget to signup in [Google AI Studio](https://aistudio.google.com/prompts/new_chat?_gl=1*7l13oq*_ga*NTYzOTU5NTguMTczMzkxMzE4Ng..*_ga_P1DBVKWT6V*MTczNjc1NTI0OC4zLjAuMTczNjc1NTI0OC42MC4wLjk5OTA3ODE2Mw..) for getting free Gemini Flash api
     * Full documentation and setup guide included in notebook
     * Step-by-step tutorial for creating your own version
